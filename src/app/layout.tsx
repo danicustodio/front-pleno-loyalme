@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Open_Sans, Montserrat } from 'next/font/google'
 import './globals.css'
+import { Providers } from '@/components/providers'
 
 const getOpenSans = Open_Sans({
   variable: '--font-open-sans',
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${getOpenSans.variable} ${getMontserrat.variable}`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

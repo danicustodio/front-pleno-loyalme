@@ -1,0 +1,81 @@
+{
+  "message": "success",
+  "code": "S001",
+  "data": {
+    "id": 8890,
+    "legacyId": 382847,
+    "title": "Cupom Pronto Light de 10% OFF em todo o site!",
+    "slug": "cupom-pronto-light-de-10-off-em-todo-o-site",
+    "image": "https://media.cuponeria.com.br/loyalty/content/image/offer/cupom-pronto-light-de-10-off-em-todo-o-site/60f48e68-cupom-prontolight-334x180.webp",
+    "discount": 10,
+    "quantity": 0,
+    "limit": 0,
+    "rules": "O cupom possui limite de 1 uso por CPF. Confira as condições de desconto e frete para o seu CEP no site. O desconto não contempla o frete. Desconto não cumulativo com outras ofertas. Para registrar o cashback é necessário ser redirecionado para o site a partir do cupom. Sujeito a limite de promoção e alterações sem aviso prévio. Cashback limitado a mil reais por compra (valores maiores serão reajustados para o limite durante o período de validação pelo parceiro).",
+    "url": null,
+    "code": "DESCONTO10",
+    "partialCode": "O10",
+    "badge": "10%",
+    "renderType": "COUPON_ONLINE",
+    "pickedCount": 599,
+    "expired": false,
+    "expirationDate": "2025-12-31 00:00:00",
+    "publishedDate": "2023-07-26 14:34:19",
+    "cashback": {
+      "type": "PERCENTAGE",
+      "rate": {
+        "current": 1.5,
+        "previous": null
+      }
+    },
+    "partnerUrl": "https://compre.vc/v2/202950d5aed",
+    "addresses": null,
+    "storeId": 2775,
+    "legacyStoreId": 38178,
+    "categoryIds": [
+      5827,
+      5832,
+      19267
+    ],
+    "store": {
+      "id": 2775,
+      "legacyId": 38178,
+      "slug": "prontolight",
+      "name": "Pronto Light",
+      "url": "https://prontolight.com/",
+      "description": null,
+      "notice": null,
+      "rules": [
+        "O tempo médio para a marca notificar a sua compra e ela aparecer como pendente em sua carteira é de até 7 dias úteis (em média 48h).",
+        "Após o registro de compra, seu saldo será confirmado entre 45 e 120 dias (em média 45 dias), a depender da aprovação pelo anunciante.",
+        "Cashback (dinheiro de volta) limitado a R$1.000 (mil) reais por compra registrada na carteira digital. Valores superiores serão reajustados para o limite até a data de confirmação pelo marca.",
+        "Esvazie o seu carrinho antes de ativar o cashback pela Cuponeria na loja parceira.",
+        "É necessário manter todo o processo de compra na mesma janela/aba do navegador onde fizemos o redirecionamento inicialmente.",
+        "Compras via aplicativo da marca não possuem cashback.",
+        "É recomendado que se utilize o mesmo e-mail e CPF cadastrado na Cuponeria para efetuar sua compra.",
+        "Cashback não cumulativo com Programas de Fidelidade.",
+        "Cashback não é válido nas compras em listas de casamento.",
+        "Cashback válido apenas para o e-commerce, não é válido para as lojas físicas.",
+        "A marca parceira é responsável por informar o valor final da compra (sem frete, taxa ou encargos) e nós somos responsáveis por garantir o valor (percentual ou fixo) de cashback ofertado sobre este valor.",
+        "O cashback pode ser invalidado ao usar códigos promocionais, vale compras, sites de buscadores de preço, Google Shopping e qualquer outro desconto ou condição especial que não esteja disponível na Cuponeria."
+      ],
+      "logo": "https://media.cuponeria.com.br/loyalty/content/image/store/prontolight/c95b0bda-prontolight-100x100-72x72.webp",
+      "secondaryLogo": null,
+      "maxDiscount": 15,
+      "tags": "saúde,leveza,equilíbrio,alimentação,balanceada,nutrição,fitness,bem-estar,refeições,saudáveis",
+      "cashback": {
+        "type": "PERCENTAGE",
+        "rate": {
+          "current": 1.5,
+          "previous": null
+        }
+      },
+      "partnerUrl": "https://compre.vc/v2/133950d5aed",
+      "lastRevision": "2025-08-28 14:00:04"
+    },
+    "customization": {
+      "offerButtonLabel": null
+    },
+    "hideCodeOnLoad": false,
+    "link": null
+  }
+}

@@ -1,5 +1,4 @@
 import { Coupon } from '@/types/coupon'
-import Image from 'next/image'
 import { CouponBadge } from './coupon-badge'
 import { CouponImage } from './coupon-image'
 
@@ -17,12 +16,8 @@ export const CouponCard = ({ coupon, onClick }: CouponCardProps) => {
       <div className="flex items-center gap-2">
         <CouponImage alt={`Cupom ${coupon.title}`} src={coupon.image} />
         <div className="flex flex-col gap-1">
-          {!!coupon.badge && <CouponBadge value={`${coupon.badge} OFF`} />}
-          {!!coupon.cashback && (
-            <CouponBadge
-              value={`${coupon.cashback?.rate.current}% de cashback`}
-            />
-          )}
+          {!!coupon.discount && <CouponBadge value={coupon.discount} />}
+          {!!coupon.cashback && <CouponBadge value={coupon.cashback} />}
         </div>
       </div>
 

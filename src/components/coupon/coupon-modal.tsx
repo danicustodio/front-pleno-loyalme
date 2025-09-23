@@ -44,14 +44,8 @@ export const CouponModal = ({ isOpen, onClose, coupon }: CouponModalProps) => {
             <CouponImage alt={`Cupom ${coupon.title}`} src={coupon.image} />
             <div>
               <div className="mb-[11px] flex gap-2">
-                {!!coupon.badge && (
-                  <CouponBadge value={`${coupon.badge} OFF`} />
-                )}
-                {!!coupon.cashback && (
-                  <CouponBadge
-                    value={`${coupon.cashback?.rate.current}% de cashback`}
-                  />
-                )}
+                {!!coupon.discount && <CouponBadge value={coupon.discount} />}
+                {!!coupon.cashback && <CouponBadge value={coupon.cashback} />}
               </div>
               <p className="text-loyal-gray-3 text-base leading-5">
                 {coupon.title}
