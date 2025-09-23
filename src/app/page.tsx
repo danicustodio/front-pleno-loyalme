@@ -1,7 +1,9 @@
+import { CouponGallery } from '@/components/coupon/coupon-gallery'
+
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-red-500">Hello World</h1>
+    <div className="bg-loyal-gray-1 px-4 py-6">
+      <CouponGallery />
     </div>
-  );
+  )
 }
