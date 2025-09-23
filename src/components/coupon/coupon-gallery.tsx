@@ -3,14 +3,23 @@ import { useState } from 'react'
 import MOCK_COUPONS from '../../../list.json'
 import { CouponCard } from './coupon-card'
 import { Coupon } from '@/types/coupon'
+import { CouponModal } from './coupon-modal'
 
 export const CouponGallery = () => {
   const [coupons, setCoupons] = useState<Coupon[]>(
     MOCK_COUPONS.data as unknown as Coupon[]
   )
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedCoupon, setSelectedCoupon] = useState<Coupon | null>(null)
 
   const handleCouponClick = (coupon: Coupon) => {
-    console.log('Coupon: ', coupon.title)
+    setSelectedCoupon(coupon)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedCoupon(null)
   }
 
   return (
@@ -24,6 +33,12 @@ export const CouponGallery = () => {
           />
         ))}
       </div>
+
+      <CouponModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        coupon={selectedCoupon}
+      />
     </div>
   )
 }

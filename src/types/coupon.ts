@@ -12,4 +12,5 @@ export interface Coupon {
   image: string
   cashback: Cashback | null
   badge: string | null
+  rules: string
 }

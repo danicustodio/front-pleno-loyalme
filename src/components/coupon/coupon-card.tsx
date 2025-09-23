@@ -1,6 +1,7 @@
 import { Coupon } from '@/types/coupon'
 import Image from 'next/image'
 import { CouponBadge } from './coupon-badge'
+import { CouponImage } from './coupon-image'
 
 interface CouponCardProps {
   coupon: Coupon
@@ -14,13 +15,7 @@ export const CouponCard = ({ coupon, onClick }: CouponCardProps) => {
       className="h-(--loyal-card-height) w-(--loyal-card-width) cursor-pointer overflow-hidden rounded-2xl bg-white p-6 shadow-(--loyal-shadow-card)"
     >
       <div className="flex items-center gap-2">
-        <Image
-          alt={`Cupom ${coupon.title}`}
-          src={coupon.image}
-          width={80}
-          height={80}
-          className="border-loyal-gray-2 h-20 w-20 rounded-full border-[0.5px] object-cover shadow-(--loyal-shadow-image)"
-        />
+        <CouponImage alt={`Cupom ${coupon.title}`} src={coupon.image} />
         <div className="flex flex-col gap-1">
           {!!coupon.badge && <CouponBadge value={`${coupon.badge} OFF`} />}
           {!!coupon.cashback && (
