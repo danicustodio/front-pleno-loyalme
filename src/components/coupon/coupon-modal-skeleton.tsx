@@ -1,8 +1,8 @@
 export const CouponModalSkeleton = () => {
   return (
-    <div className="animate-pulse">
+    <div className="animate-pulse px-4">
       <div className="flex gap-2">
-        <div className="h-16 w-16 rounded bg-gray-300"></div>
+        <div className="h-16 w-16 rounded-full bg-gray-300"></div>
         <div>
           <div className="mb-[11px] flex gap-2">
             <div className="h-6 w-12 rounded bg-gray-300"></div>

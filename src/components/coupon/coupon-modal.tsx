@@ -27,7 +27,7 @@ export const CouponModal = ({ isOpen, onClose, coupon }: CouponModalProps) => {
 
       {!isLoading && !error && details && (
         <div>
-          <div className="flex gap-2">
+          <div className="flex gap-2 px-[15px]">
             <CouponImage alt={`Cupom ${details.title}`} src={details.image} />
             <div>
               <div className="mb-[11px] flex gap-2">
@@ -40,7 +40,7 @@ export const CouponModal = ({ isOpen, onClose, coupon }: CouponModalProps) => {
             </div>
           </div>
 
-          <div className="mt-8 mb-10 flex h-[50px] w-full">
+          <div className="mt-8 mb-10 flex h-[50px] w-full px-[15px]">
             <div className="border-loyal-red flex flex-1 items-center justify-center rounded-l-full border-2">
               <p className="text-loyal-gray-3 text-center text-base leading-4 font-bold">
                 {details.code}
@@ -55,11 +55,11 @@ export const CouponModal = ({ isOpen, onClose, coupon }: CouponModalProps) => {
             </button>
           </div>
 
-          <div className="bg-loyal-gray-5 h-[170px]">
+          <div className="bg-loyal-gray-5 px-[15px] py-5 md:rounded-b-3xl">
             <p className="text-loyal-gray-3 mb-[11px] text-sm leading-4 font-bold">
               Regras de uso
             </p>
-            <div className="h-full overflow-y-auto">
+            <div className="max-h-28 overflow-y-auto">
               <p className="text-loyal-gray-3 text-sm leading-[18px]">
                 {details.rules}
               </p>

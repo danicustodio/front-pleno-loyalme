@@ -21,7 +21,7 @@ export const CouponCard = ({ coupon, onClick }: CouponCardProps) => {
         </div>
       </div>
 
-      <hr className="my-4 border-2 border-dashed border-gray-300" />
+      <div className="border-loyal-gray-6 my-4 h-[0.2px] w-full border-t-2 border-dashed" />
 
       <div>
         <p className="text-loyal-gray-3 text-base leading-5">{coupon.title}</p>
