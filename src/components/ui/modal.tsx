@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import { ModalCloseButton } from './modal-close-button'
 import { useBodyScrollLock } from '@/hooks/use-body-scroll-block'
 
-interface ModalProps {
+export interface ModalProps {
   isOpen: boolean
   onClose: () => void
   children: ReactNode
