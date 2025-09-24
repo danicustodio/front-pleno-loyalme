@@ -6,7 +6,7 @@ import { Modal } from '@/components/ui/modal'
 import { ModalError } from '@/components/ui/modal-error'
 import { useGetCouponDetails } from '@/hooks/use-get-coupon-details'
 
-interface CouponModalProps {
+export interface CouponModalProps {
   isOpen: boolean
   onClose: () => void
   coupon: Coupon
