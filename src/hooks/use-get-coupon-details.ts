@@ -6,6 +6,7 @@ import {
 import { FIVE_MINUTES, QUERY_KEYS, TEN_MINUTES } from '@/utils/constants'
 import { getCashbackType } from '@/utils/get-cashback-type'
 import { getDiscountType } from '@/utils/get-discount-type'
+import { API_ENDPOINTS } from '@/config/api'
 import { useQuery } from '@tanstack/react-query'
 
 export function useGetCouponDetails(slug: string) {
@@ -14,12 +15,8 @@ export function useGetCouponDetails(slug: string) {
     queryFn: async (): Promise<CouponDetails> => {
       try {
         const [detailsResponse, codeResponse] = await Promise.all([
-          fetch(
-            `https://api.cuponeria.com.br/public/v4.1/loyalty/cuponeria/offer?slug=${slug}`
-          ),
-          fetch(
-            `https://api.cuponeria.com.br/public/v4.1/loyalty/cuponeria/offer/pick?slug=${slug}`
-          ),
+          fetch(API_ENDPOINTS.COUPON_DETAILS(slug)),
+          fetch(API_ENDPOINTS.COUPON_CODE(slug)),
         ])
 
         if (!detailsResponse.ok || !codeResponse.ok) {

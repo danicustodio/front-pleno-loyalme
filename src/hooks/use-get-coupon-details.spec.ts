@@ -5,6 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useGetCouponDetails } from './use-get-coupon-details'
 import { createCouponScenario } from '@/utils/testing/factories/create-coupon-scenario'
 import { createMockFetchScenario } from '@/utils/testing/factories/create-mock-fetch-scenario'
+import { API_ENDPOINTS } from '@/config/api'
 
 describe('useGetCouponDetails', () => {
   let queryClient: QueryClient
@@ -60,11 +61,11 @@ describe('useGetCouponDetails', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2)
     expect(fetchMock).toHaveBeenNthCalledWith(
       1,
-      'https://api.cuponeria.com.br/public/v4.1/loyalty/cuponeria/offer?slug=coupon-with-cashback'
+      API_ENDPOINTS.COUPON_DETAILS('coupon-with-cashback')
     )
     expect(fetchMock).toHaveBeenNthCalledWith(
       2,
-      'https://api.cuponeria.com.br/public/v4.1/loyalty/cuponeria/offer/pick?slug=coupon-with-cashback'
+      API_ENDPOINTS.COUPON_CODE('coupon-with-cashback')
     )
   })
 

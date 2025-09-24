@@ -5,6 +5,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useGetCoupons } from './use-get-coupons'
 import { createCouponScenario } from '@/utils/testing/factories/create-coupon-scenario'
 import { createMockFetchScenario } from '@/utils/testing/factories/create-mock-fetch-scenario'
+import { API_ENDPOINTS } from '@/config/api'
 
 describe('useGetCoupons', () => {
   let queryClient: QueryClient
@@ -66,9 +67,7 @@ describe('useGetCoupons', () => {
       }),
     ])
 
-    expect(fetchMock).toHaveBeenCalledWith(
-      'https://api.cuponeria.com.br/public/v4.2/loyalty/cuponeria/category/trend/offer/list?id=5827'
-    )
+    expect(fetchMock).toHaveBeenCalledWith(API_ENDPOINTS.COUPON_LIST)
   })
 
   it('handles error responses', async () => {

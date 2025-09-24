@@ -2,6 +2,7 @@ import { Coupon, CouponListResponseSchema } from '@/types/coupon'
 import { FIVE_MINUTES, QUERY_KEYS, TEN_MINUTES } from '@/utils/constants'
 import { getCashbackType } from '@/utils/get-cashback-type'
 import { getDiscountType } from '@/utils/get-discount-type'
+import { API_ENDPOINTS } from '@/config/api'
 import { useQuery } from '@tanstack/react-query'
 
 export function useGetCoupons() {
@@ -9,9 +10,7 @@ export function useGetCoupons() {
     queryKey: [QUERY_KEYS.couponList],
     queryFn: async (): Promise<Coupon[]> => {
       try {
-        const response = await fetch(
-          'https://api.cuponeria.com.br/public/v4.2/loyalty/cuponeria/category/trend/offer/list?id=5827'
-        )
+        const response = await fetch(API_ENDPOINTS.COUPON_LIST)
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
