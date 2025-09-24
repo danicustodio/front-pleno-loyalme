@@ -15,16 +15,18 @@ const BaseCouponSchema = z.object({
   image: z.url('Invalid image URL'),
   rules: z.string(),
 })
+
 export const ServerCouponSchema = BaseCouponSchema.extend({
   cashback: CashbackSchema.nullable(),
   badge: z.string().nullable(),
   discount: z.coerce.number().nullable(),
 })
+export type ServerCoupon = z.infer<typeof ServerCouponSchema>
+
 export const CouponSchema = BaseCouponSchema.extend({
   cashback: z.string().nullable(),
   discount: z.string().nullable(),
 })
-export type ServerCoupon = z.infer<typeof ServerCouponSchema>
 export type Coupon = z.infer<typeof CouponSchema>
 
 export const CouponListResponseSchema = z.object({
@@ -43,3 +45,26 @@ export const CouponListResponseSchema = z.object({
     .optional(),
 })
 export type CouponListResponse = z.infer<typeof CouponListResponseSchema>
+
+export const CouponDetailsResponseSchema = z.object({
+  message: z.string(),
+  code: z.string(),
+  data: ServerCouponSchema,
+})
+export type CouponDetailsResponse = z.infer<typeof CouponDetailsResponseSchema>
+
+export const CouponCodeResponseSchema = z.object({
+  message: z.string(),
+  code: z.string(),
+  data: z.object({
+    id: z.coerce.number(),
+    offerId: z.coerce.number(),
+    code: z.string(),
+  }),
+})
+export type CouponCodeResponse = z.infer<typeof CouponCodeResponseSchema>
+
+export const CouponDetailsSchema = CouponSchema.extend({
+  code: z.string(),
+})
+export type CouponDetails = z.infer<typeof CouponDetailsSchema>

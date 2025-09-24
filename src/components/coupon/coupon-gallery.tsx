@@ -36,7 +36,7 @@ export const CouponGallery = () => {
     return (
       <div>
         <div className="flex flex-col items-center gap-4 md:flex-row md:flex-wrap md:justify-center">
-          {Array.from({ length: 6 }).map((_, index) => (
+          {Array.from({ length: 4 }).map((_, index) => (
             <CouponCardSkeleton key={index} />
           ))}
         </div>
@@ -56,11 +56,13 @@ export const CouponGallery = () => {
         ))}
       </div>
 
-      <CouponModal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        coupon={selectedCoupon}
-      />
+      {isModalOpen && selectedCoupon !== null && (
+        <CouponModal
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+          coupon={selectedCoupon}
+        />
+      )}
     </div>
   )
 }
